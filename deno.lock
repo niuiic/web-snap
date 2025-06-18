@@ -3,8 +3,8 @@
   "specifiers": {
     "jsr:@std/assert@^1.0.13": "1.0.13",
     "jsr:@std/internal@^1.0.6": "1.0.7",
-    "npm:playwright@*": "1.52.0",
-    "npm:playwright@^1.52.0": "1.52.0"
+    "npm:playwright@^1.53.0": "1.53.0",
+    "npm:zod@^3.25.67": "3.25.67"
   },
   "jsr": {
     "@std/assert@1.0.13": {
@@ -24,13 +24,13 @@
       "scripts": true,
       "tarball": "https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz"
     },
-    "playwright-core@1.52.0": {
-      "integrity": "sha512-l2osTgLXSMeuLZOML9qYODUQoPPnUsKsb5/P6LJ2e6uPKXUdPK5WYhN4z03G+YNbWmGDY4YENauNu4ZKczreHg==",
+    "playwright-core@1.53.0": {
+      "integrity": "sha512-mGLg8m0pm4+mmtB7M89Xw/GSqoNC+twivl8ITteqvAndachozYe2ZA7srU6uleV1vEdAHYqjq+SV8SNxRRFYBw==",
       "bin": true,
-      "tarball": "https://registry.npmmirror.com/playwright-core/-/playwright-core-1.52.0.tgz"
+      "tarball": "https://registry.npmmirror.com/playwright-core/-/playwright-core-1.53.0.tgz"
     },
-    "playwright@1.52.0": {
-      "integrity": "sha512-JAwMNMBlxJ2oD1kce4KPtMkDeKGHQstdpFPcPH3maElAXon/QZeTvtsfXmTMRyO9TslfoYOXkSsvao2nE1ilTw==",
+    "playwright@1.53.0": {
+      "integrity": "sha512-ghGNnIEYZC4E+YtclRn4/p6oYbdPiASELBIYkBXfaTVKreQUYbMUYQDwS12a8F0/HtIjr/CkGjtwABeFPGcS4Q==",
       "dependencies": [
         "playwright-core"
       ],
@@ -38,13 +38,18 @@
         "fsevents"
       ],
       "bin": true,
-      "tarball": "https://registry.npmmirror.com/playwright/-/playwright-1.52.0.tgz"
+      "tarball": "https://registry.npmmirror.com/playwright/-/playwright-1.53.0.tgz"
+    },
+    "zod@3.25.67": {
+      "integrity": "sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==",
+      "tarball": "https://registry.npmmirror.com/zod/-/zod-3.25.67.tgz"
     }
   },
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@^1.0.13",
-      "npm:playwright@^1.52.0"
+      "npm:playwright@^1.53.0",
+      "npm:zod@^3.25.67"
     ]
   }
 }
