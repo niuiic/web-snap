@@ -3,12 +3,10 @@ services:
   headless-chrome:
     image: docker.io/zenika/alpine-chrome
     container_name: headless-chrome
-    ports:
-      - "9222:9222"
+    network_mode: "host"
     command: >
       --no-sandbox
       --headless
-      --disable-gpu
-      --remote-debugging-address=0.0.0.0
       --remote-debugging-port=9222
+      --user-data-dir=/home/chrome/data
     restart: unless-stopped
