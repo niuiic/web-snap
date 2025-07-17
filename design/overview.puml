@@ -1,0 +1,93 @@
+@startuml
+allowmixing
+skinparam rectangle {
+    BackgroundColor<<Event>> #FFD700
+    BackgroundColor<<Command>> #87CEEB
+    BackgroundColor<<Role>> #9370DB
+    BackgroundColor<<BusinessRule>> #FF6347
+    BackgroundColor<<Entity>> #20B2AA
+    BackgroundColor<<ValueObject>> #F0E68C
+    BackgroundColor<<Aggregate>> #98FB98
+    BackgroundColor<<AggregateRoot>> #32CD32
+    BackgroundColor<<BoundedContext>> #DDA0DD
+    BackgroundColor<<Policy>> #FFB6C1
+    BackgroundColor<<ReadModel>> #D2B48C
+    BackgroundColor<<Repository>> #8FBC8F
+    BackgroundColor<<Service>> #FF8C00
+}
+
+/' % connect to browser % '/
+rectangle browserConnected <<Event>>
+rectangle connectToBrowser <<Command>>
+connectToBrowser --> browserConnected
+
+/' % page % '/
+rectangle page <<Entity>> {
+    class Page {
+        -url: string
+        -closed: boolean
+        +clean()
+        +shot(outputPath: string)
+        +close(repo: PageRepo)
+    }
+}
+
+/' % page repo % '/
+rectangle pageRepo <<Repository>> {
+    class PageRepo {
+        +addPage(url: string): Page
+        +removePage(page: Page)
+        +findPageByUrl(url: string): Page
+    }
+}
+
+/' % load page % '/
+rectangle pageLoaded <<Event>>
+browserConnected -right-> pageLoaded
+rectangle loadPage <<Command>>
+loadPage --> pageRepo
+pageRepo --> pageLoaded
+
+/' % clean page % '/
+rectangle pageCleaned <<Event>>
+pageLoaded -right-> pageCleaned
+rectangle cleanPage <<Command>>
+cleanPage --> page
+page --> pageCleaned
+
+/' % shot page % '/
+rectangle pageShot <<Event>>
+pageCleaned -right-> pageShot
+rectangle takePageShot <<Command>>
+takePageShot --> page
+page --> pageShot
+
+/' % close page % '/
+rectangle pageClosed <<Event>>
+pageShot -right-> pageClosed
+rectangle closePage <<Command>>
+closePage --> pageRepo
+pageRepo --> pageClosed
+
+/' % switch to another page % '/
+rectangle pageSwitched <<Event>>
+pageClosed -right-> pageSwitched
+rectangle switchPage <<Command>>
+switchPage --> pageSwitched
+
+rectangle allPageShot <<Event>>
+pageSwitched --> pageLoaded
+pageShot --> allPageShot
+
+/' % merge pdf % '/
+rectangle pdfMerged <<Event>>
+allPageShot --> pdfMerged
+rectangle mergePdf <<Command>>
+rectangle pdfMerger <<Service>> {
+    class PdfMerger {
+        +merge(filePaths: string[], outputPath: string)
+    }
+}
+mergePdf --> pdfMerger
+pdfMerger --> pdfMerged
+@enduml

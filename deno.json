@@ -3,8 +3,9 @@
     "dev": "deno run --watch main.ts"
   },
   "imports": {
-    "playwright": "npm:playwright@^1.53.2",
-    "zod": "npm:zod@^3.25.72"
+    "inversify": "npm:inversify@^7.6.1",
+    "playwright": "npm:playwright@^1.54.1",
+    "zod": "npm:zod@^4.0.5"
   },
   "lint": {
     "rules": {
