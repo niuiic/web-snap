@@ -5,6 +5,8 @@
   "imports": {
     "inversify": "npm:inversify@^7.6.1",
     "playwright": "npm:playwright@^1.54.1",
+    "playwright-extra": "npm:playwright-extra@^4.3.6",
+    "puppeteer-extra-plugin-stealth": "npm:puppeteer-extra-plugin-stealth@^2.11.2",
     "zod": "npm:zod@^4.0.5"
   },
   "lint": {

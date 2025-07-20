@@ -2,7 +2,9 @@
   "version": "5",
   "specifiers": {
     "npm:inversify@^7.6.1": "7.6.1_reflect-metadata@0.2.2",
+    "npm:playwright-extra@^4.3.6": "4.3.6_playwright@1.54.1",
     "npm:playwright@^1.54.1": "1.54.1",
+    "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1",
     "npm:zod@^4.0.5": "4.0.5"
   },
   "npm": {
@@ -48,11 +50,122 @@
       ],
       "tarball": "https://registry.npmmirror.com/@inversifyjs/reflect-metadata-utils/-/reflect-metadata-utils-1.2.0.tgz"
     },
+    "@types/debug@4.1.12": {
+      "integrity": "sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==",
+      "dependencies": [
+        "@types/ms"
+      ],
+      "tarball": "https://registry.npmmirror.com/@types/debug/-/debug-4.1.12.tgz"
+    },
+    "@types/ms@2.1.0": {
+      "integrity": "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==",
+      "tarball": "https://registry.npmmirror.com/@types/ms/-/ms-2.1.0.tgz"
+    },
+    "arr-union@3.1.0": {
+      "integrity": "sha512-sKpyeERZ02v1FeCZT8lrfJq5u6goHCtpTAzPwJYe7c8SPFOboNjNg1vz2L4VTn9T4PQxEx13TbXLmYUcS6Ug7Q==",
+      "tarball": "https://registry.npmmirror.com/arr-union/-/arr-union-3.1.0.tgz"
+    },
+    "balanced-match@1.0.2": {
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
+      "tarball": "https://registry.npmmirror.com/balanced-match/-/balanced-match-1.0.2.tgz"
+    },
+    "brace-expansion@1.1.12": {
+      "integrity": "sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==",
+      "dependencies": [
+        "balanced-match",
+        "concat-map"
+      ],
+      "tarball": "https://registry.npmmirror.com/brace-expansion/-/brace-expansion-1.1.12.tgz"
+    },
+    "clone-deep@0.2.4": {
+      "integrity": "sha512-we+NuQo2DHhSl+DP6jlUiAhyAjBQrYnpOk15rN6c6JSPScjiCLh8IbSU+VTcph6YS3o7mASE8a0+gbZ7ChLpgg==",
+      "dependencies": [
+        "for-own",
+        "is-plain-object",
+        "kind-of@3.2.2",
+        "lazy-cache@1.0.4",
+        "shallow-clone"
+      ],
+      "tarball": "https://registry.npmmirror.com/clone-deep/-/clone-deep-0.2.4.tgz"
+    },
+    "concat-map@0.0.1": {
+      "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==",
+      "tarball": "https://registry.npmmirror.com/concat-map/-/concat-map-0.0.1.tgz"
+    },
+    "debug@4.4.1": {
+      "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+      "dependencies": [
+        "ms"
+      ],
+      "tarball": "https://registry.npmmirror.com/debug/-/debug-4.4.1.tgz"
+    },
+    "deepmerge@4.3.1": {
+      "integrity": "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==",
+      "tarball": "https://registry.npmmirror.com/deepmerge/-/deepmerge-4.3.1.tgz"
+    },
+    "for-in@0.1.8": {
+      "integrity": "sha512-F0to7vbBSHP8E3l6dCjxNOLuSFAACIxFy3UehTUlG7svlXi37HHsDkyVcHo0Pq8QwrE+pXvWSVX3ZT1T9wAZ9g==",
+      "tarball": "https://registry.npmmirror.com/for-in/-/for-in-0.1.8.tgz"
+    },
+    "for-in@1.0.2": {
+      "integrity": "sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==",
+      "tarball": "https://registry.npmmirror.com/for-in/-/for-in-1.0.2.tgz"
+    },
+    "for-own@0.1.5": {
+      "integrity": "sha512-SKmowqGTJoPzLO1T0BBJpkfp3EMacCMOuH40hOUbrbzElVktk4DioXVM99QkLCyKoiuOmyjgcWMpVz2xjE7LZw==",
+      "dependencies": [
+        "for-in@1.0.2"
+      ],
+      "tarball": "https://registry.npmmirror.com/for-own/-/for-own-0.1.5.tgz"
+    },
+    "fs-extra@10.1.0": {
+      "integrity": "sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==",
+      "dependencies": [
+        "graceful-fs",
+        "jsonfile",
+        "universalify"
+      ],
+      "tarball": "https://registry.npmmirror.com/fs-extra/-/fs-extra-10.1.0.tgz"
+    },
+    "fs.realpath@1.0.0": {
+      "integrity": "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==",
+      "tarball": "https://registry.npmmirror.com/fs.realpath/-/fs.realpath-1.0.0.tgz"
+    },
     "fsevents@2.3.2": {
       "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==",
       "os": ["darwin"],
       "scripts": true,
       "tarball": "https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz"
+    },
+    "glob@7.2.3": {
+      "integrity": "sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==",
+      "dependencies": [
+        "fs.realpath",
+        "inflight",
+        "inherits",
+        "minimatch",
+        "once",
+        "path-is-absolute"
+      ],
+      "deprecated": true,
+      "tarball": "https://registry.npmmirror.com/glob/-/glob-7.2.3.tgz"
+    },
+    "graceful-fs@4.2.11": {
+      "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==",
+      "tarball": "https://registry.npmmirror.com/graceful-fs/-/graceful-fs-4.2.11.tgz"
+    },
+    "inflight@1.0.6": {
+      "integrity": "sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==",
+      "dependencies": [
+        "once",
+        "wrappy"
+      ],
+      "deprecated": true,
+      "tarball": "https://registry.npmmirror.com/inflight/-/inflight-1.0.6.tgz"
+    },
+    "inherits@2.0.4": {
+      "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+      "tarball": "https://registry.npmmirror.com/inherits/-/inherits-2.0.4.tgz"
     },
     "inversify@7.6.1_reflect-metadata@0.2.2": {
       "integrity": "sha512-a4bN7pjKP+h5ABNsf7vQNU0S5P/44RFqcUpFWXZLGEJuedF5ux3CvWGn2TfSbVbk3r7hNto6G3tR0j70nbFDKw==",
@@ -64,10 +177,111 @@
       ],
       "tarball": "https://registry.npmmirror.com/inversify/-/inversify-7.6.1.tgz"
     },
+    "is-buffer@1.1.6": {
+      "integrity": "sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==",
+      "tarball": "https://registry.npmmirror.com/is-buffer/-/is-buffer-1.1.6.tgz"
+    },
+    "is-extendable@0.1.1": {
+      "integrity": "sha512-5BMULNob1vgFX6EjQw5izWDxrecWK9AM72rugNr0TFldMOi0fj6Jk+zeKIt0xGj4cEfQIJth4w3OKWOJ4f+AFw==",
+      "tarball": "https://registry.npmmirror.com/is-extendable/-/is-extendable-0.1.1.tgz"
+    },
+    "is-plain-object@2.0.4": {
+      "integrity": "sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==",
+      "dependencies": [
+        "isobject"
+      ],
+      "tarball": "https://registry.npmmirror.com/is-plain-object/-/is-plain-object-2.0.4.tgz"
+    },
+    "isobject@3.0.1": {
+      "integrity": "sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==",
+      "tarball": "https://registry.npmmirror.com/isobject/-/isobject-3.0.1.tgz"
+    },
+    "jsonfile@6.1.0": {
+      "integrity": "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==",
+      "dependencies": [
+        "universalify"
+      ],
+      "optionalDependencies": [
+        "graceful-fs"
+      ],
+      "tarball": "https://registry.npmmirror.com/jsonfile/-/jsonfile-6.1.0.tgz"
+    },
+    "kind-of@2.0.1": {
+      "integrity": "sha512-0u8i1NZ/mg0b+W3MGGw5I7+6Eib2nx72S/QvXa0hYjEkjTknYmEYQJwGu3mLC0BrhtJjtQafTkyRUQ75Kx0LVg==",
+      "dependencies": [
+        "is-buffer"
+      ],
+      "tarball": "https://registry.npmmirror.com/kind-of/-/kind-of-2.0.1.tgz"
+    },
+    "kind-of@3.2.2": {
+      "integrity": "sha512-NOW9QQXMoZGg/oqnVNoNTTIFEIid1627WCffUBJEdMxYApq7mNE7CpzucIPc+ZQg25Phej7IJSmX3hO+oblOtQ==",
+      "dependencies": [
+        "is-buffer"
+      ],
+      "tarball": "https://registry.npmmirror.com/kind-of/-/kind-of-3.2.2.tgz"
+    },
+    "lazy-cache@0.2.7": {
+      "integrity": "sha512-gkX52wvU/R8DVMMt78ATVPFMJqfW8FPz1GZ1sVHBVQHmu/WvhIWE4cE1GBzhJNFicDeYhnwp6Rl35BcAIM3YOQ==",
+      "tarball": "https://registry.npmmirror.com/lazy-cache/-/lazy-cache-0.2.7.tgz"
+    },
+    "lazy-cache@1.0.4": {
+      "integrity": "sha512-RE2g0b5VGZsOCFOCgP7omTRYFqydmZkBwl5oNnQ1lDYC57uyO9KqNnNVxT7COSHTxrRCWVcAVOcbjk+tvh/rgQ==",
+      "tarball": "https://registry.npmmirror.com/lazy-cache/-/lazy-cache-1.0.4.tgz"
+    },
+    "merge-deep@3.0.3": {
+      "integrity": "sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==",
+      "dependencies": [
+        "arr-union",
+        "clone-deep",
+        "kind-of@3.2.2"
+      ],
+      "tarball": "https://registry.npmmirror.com/merge-deep/-/merge-deep-3.0.3.tgz"
+    },
+    "minimatch@3.1.2": {
+      "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
+      "dependencies": [
+        "brace-expansion"
+      ],
+      "tarball": "https://registry.npmmirror.com/minimatch/-/minimatch-3.1.2.tgz"
+    },
+    "mixin-object@2.0.1": {
+      "integrity": "sha512-ALGF1Jt9ouehcaXaHhn6t1yGWRqGaHkPFndtFVHfZXOvkIZ/yoGaSi0AHVTafb3ZBGg4dr/bDwnaEKqCXzchMA==",
+      "dependencies": [
+        "for-in@0.1.8",
+        "is-extendable"
+      ],
+      "tarball": "https://registry.npmmirror.com/mixin-object/-/mixin-object-2.0.1.tgz"
+    },
+    "ms@2.1.3": {
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+      "tarball": "https://registry.npmmirror.com/ms/-/ms-2.1.3.tgz"
+    },
+    "once@1.4.0": {
+      "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==",
+      "dependencies": [
+        "wrappy"
+      ],
+      "tarball": "https://registry.npmmirror.com/once/-/once-1.4.0.tgz"
+    },
+    "path-is-absolute@1.0.1": {
+      "integrity": "sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==",
+      "tarball": "https://registry.npmmirror.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
+    },
     "playwright-core@1.54.1": {
       "integrity": "sha512-Nbjs2zjj0htNhzgiy5wu+3w09YetDx5pkrpI/kZotDlDUaYk0HVA5xrBVPdow4SAUIlhgKcJeJg4GRKW6xHusA==",
       "bin": true,
       "tarball": "https://registry.npmmirror.com/playwright-core/-/playwright-core-1.54.1.tgz"
+    },
+    "playwright-extra@4.3.6_playwright@1.54.1": {
+      "integrity": "sha512-q2rVtcE8V8K3vPVF1zny4pvwZveHLH8KBuVU2MoE3Jw4OKVoBWsHI9CH9zPydovHHOCDxjGN2Vg+2m644q3ijA==",
+      "dependencies": [
+        "debug",
+        "playwright"
+      ],
+      "optionalPeers": [
+        "playwright"
+      ],
+      "tarball": "https://registry.npmmirror.com/playwright-extra/-/playwright-extra-4.3.6.tgz"
     },
     "playwright@1.54.1": {
       "integrity": "sha512-peWpSwIBmSLi6aW2auvrUtf2DqY16YYcCMO8rTVx486jKmDTJg7UAhyrraP98GB8BoPURZP8+nxO7TSd4cPr5g==",
@@ -80,9 +294,90 @@
       "bin": true,
       "tarball": "https://registry.npmmirror.com/playwright/-/playwright-1.54.1.tgz"
     },
+    "puppeteer-extra-plugin-stealth@2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1": {
+      "integrity": "sha512-bUemM5XmTj9i2ZerBzsk2AN5is0wHMNE6K0hXBzBXOzP5m5G3Wl0RHhiqKeHToe/uIH8AoZiGhc1tCkLZQPKTQ==",
+      "dependencies": [
+        "debug",
+        "playwright-extra",
+        "puppeteer-extra-plugin",
+        "puppeteer-extra-plugin-user-preferences"
+      ],
+      "optionalPeers": [
+        "playwright-extra"
+      ],
+      "tarball": "https://registry.npmmirror.com/puppeteer-extra-plugin-stealth/-/puppeteer-extra-plugin-stealth-2.11.2.tgz"
+    },
+    "puppeteer-extra-plugin-user-data-dir@2.4.1_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1": {
+      "integrity": "sha512-kH1GnCcqEDoBXO7epAse4TBPJh9tEpVEK/vkedKfjOVOhZAvLkHGc9swMs5ChrJbRnf8Hdpug6TJlEuimXNQ+g==",
+      "dependencies": [
+        "debug",
+        "fs-extra",
+        "playwright-extra",
+        "puppeteer-extra-plugin",
+        "rimraf"
+      ],
+      "optionalPeers": [
+        "playwright-extra"
+      ],
+      "tarball": "https://registry.npmmirror.com/puppeteer-extra-plugin-user-data-dir/-/puppeteer-extra-plugin-user-data-dir-2.4.1.tgz"
+    },
+    "puppeteer-extra-plugin-user-preferences@2.4.1_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1": {
+      "integrity": "sha512-i1oAZxRbc1bk8MZufKCruCEC3CCafO9RKMkkodZltI4OqibLFXF3tj6HZ4LZ9C5vCXZjYcDWazgtY69mnmrQ9A==",
+      "dependencies": [
+        "debug",
+        "deepmerge",
+        "playwright-extra",
+        "puppeteer-extra-plugin",
+        "puppeteer-extra-plugin-user-data-dir"
+      ],
+      "optionalPeers": [
+        "playwright-extra"
+      ],
+      "tarball": "https://registry.npmmirror.com/puppeteer-extra-plugin-user-preferences/-/puppeteer-extra-plugin-user-preferences-2.4.1.tgz"
+    },
+    "puppeteer-extra-plugin@3.2.3_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1": {
+      "integrity": "sha512-6RNy0e6pH8vaS3akPIKGg28xcryKscczt4wIl0ePciZENGE2yoaQJNd17UiEbdmh5/6WW6dPcfRWT9lxBwCi2Q==",
+      "dependencies": [
+        "@types/debug",
+        "debug",
+        "merge-deep",
+        "playwright-extra"
+      ],
+      "optionalPeers": [
+        "playwright-extra"
+      ],
+      "tarball": "https://registry.npmmirror.com/puppeteer-extra-plugin/-/puppeteer-extra-plugin-3.2.3.tgz"
+    },
     "reflect-metadata@0.2.2": {
       "integrity": "sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==",
       "tarball": "https://registry.npmmirror.com/reflect-metadata/-/reflect-metadata-0.2.2.tgz"
+    },
+    "rimraf@3.0.2": {
+      "integrity": "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==",
+      "dependencies": [
+        "glob"
+      ],
+      "deprecated": true,
+      "bin": true,
+      "tarball": "https://registry.npmmirror.com/rimraf/-/rimraf-3.0.2.tgz"
+    },
+    "shallow-clone@0.1.2": {
+      "integrity": "sha512-J1zdXCky5GmNnuauESROVu31MQSnLoYvlyEn6j2Ztk6Q5EHFIhxkMhYcv6vuDzl2XEzoRr856QwzMgWM/TmZgw==",
+      "dependencies": [
+        "is-extendable",
+        "kind-of@2.0.1",
+        "lazy-cache@0.2.7",
+        "mixin-object"
+      ],
+      "tarball": "https://registry.npmmirror.com/shallow-clone/-/shallow-clone-0.1.2.tgz"
+    },
+    "universalify@2.0.1": {
+      "integrity": "sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==",
+      "tarball": "https://registry.npmmirror.com/universalify/-/universalify-2.0.1.tgz"
+    },
+    "wrappy@1.0.2": {
+      "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
+      "tarball": "https://registry.npmmirror.com/wrappy/-/wrappy-1.0.2.tgz"
     },
     "zod@4.0.5": {
       "integrity": "sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==",
@@ -92,7 +387,9 @@
   "workspace": {
     "dependencies": [
       "npm:inversify@^7.6.1",
+      "npm:playwright-extra@^4.3.6",
       "npm:playwright@^1.54.1",
+      "npm:puppeteer-extra-plugin-stealth@^2.11.2",
       "npm:zod@^4.0.5"
     ]
   }
