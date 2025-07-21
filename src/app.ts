@@ -16,15 +16,20 @@ export class App {
     const outputFiles = await firstValueFrom(
       from(pagesInfo).pipe(
         mergeMap(async (pageInfo) => {
-          const page = await this.pageFactory.create(pageInfo.url)
-          await page.prepare()
-          await page.validate()
-          const outputFile = join(this.outputDir, `${pageInfo.name}.pdf`)
-          await page.shot(outputFile)
-          page.close()
-          return outputFile
+          let closePage: () => void
+          const fn = async () => {
+            const page = await this.pageFactory.create(pageInfo.url)
+            closePage = page.close.bind(page)
+            await page.prepare()
+            await page.validate()
+            const outputFile = join(this.outputDir, `${pageInfo.name}.pdf`)
+            await page.shot(outputFile)
+            return outputFile
+          }
+          return firstValueFrom(
+            from(fn().finally(() => closePage())).pipe(retry(3))
+          )
         }, 3),
-        retry(3),
         toArray()
       )
     )
