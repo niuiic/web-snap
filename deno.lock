@@ -1,10 +1,32 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/assert@^1.0.13": "1.0.13",
+    "jsr:@std/internal@^1.0.6": "1.0.9",
+    "jsr:@std/internal@^1.0.9": "1.0.9",
+    "jsr:@std/path@^1.1.1": "1.1.1",
     "npm:pdf-lib@^1.17.1": "1.17.1",
     "npm:playwright-extra@^4.3.6": "4.3.6_playwright@1.54.1",
     "npm:playwright@^1.54.1": "1.54.1",
-    "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1"
+    "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1",
+    "npm:rxjs@^7.8.2": "7.8.2"
+  },
+  "jsr": {
+    "@std/assert@1.0.13": {
+      "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
+      "dependencies": [
+        "jsr:@std/internal@^1.0.6"
+      ]
+    },
+    "@std/internal@1.0.9": {
+      "integrity": "bdfb97f83e4db7a13e8faab26fb1958d1b80cc64366501af78a0aee151696eb8"
+    },
+    "@std/path@1.1.1": {
+      "integrity": "fe00026bd3a7e6a27f73709b83c607798be40e20c81dde655ce34052fd82ec76",
+      "dependencies": [
+        "jsr:@std/internal@^1.0.9"
+      ]
+    }
   },
   "npm": {
     "@pdf-lib/standard-fonts@1.0.0": {
@@ -238,7 +260,7 @@
         "@pdf-lib/standard-fonts",
         "@pdf-lib/upng",
         "pako",
-        "tslib"
+        "tslib@1.14.1"
       ],
       "tarball": "https://registry.npmmirror.com/pdf-lib/-/pdf-lib-1.17.1.tgz"
     },
@@ -332,6 +354,13 @@
       "bin": true,
       "tarball": "https://registry.npmmirror.com/rimraf/-/rimraf-3.0.2.tgz"
     },
+    "rxjs@7.8.2": {
+      "integrity": "sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==",
+      "dependencies": [
+        "tslib@2.8.1"
+      ],
+      "tarball": "https://registry.npmmirror.com/rxjs/-/rxjs-7.8.2.tgz"
+    },
     "shallow-clone@0.1.2": {
       "integrity": "sha512-J1zdXCky5GmNnuauESROVu31MQSnLoYvlyEn6j2Ztk6Q5EHFIhxkMhYcv6vuDzl2XEzoRr856QwzMgWM/TmZgw==",
       "dependencies": [
@@ -346,6 +375,10 @@
       "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",
       "tarball": "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz"
     },
+    "tslib@2.8.1": {
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+      "tarball": "https://registry.npmmirror.com/tslib/-/tslib-2.8.1.tgz"
+    },
     "universalify@2.0.1": {
       "integrity": "sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==",
       "tarball": "https://registry.npmmirror.com/universalify/-/universalify-2.0.1.tgz"
@@ -357,10 +390,13 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/assert@^1.0.13",
+      "jsr:@std/path@^1.1.1",
       "npm:pdf-lib@^1.17.1",
       "npm:playwright-extra@^4.3.6",
       "npm:playwright@^1.54.1",
-      "npm:puppeteer-extra-plugin-stealth@^2.11.2"
+      "npm:puppeteer-extra-plugin-stealth@^2.11.2",
+      "npm:rxjs@^7.8.2"
     ]
   }
 }

@@ -1,6 +1,6 @@
 export interface IPage {
-  getUrl(): string
   prepare(): Promise<void>
-  shot(): Promise<void>
+  validate(): Promise<void>
+  shot(outputPath: string): Promise<void>
   close(): void
 }

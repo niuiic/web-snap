@@ -1,13 +1,14 @@
-import { Browser } from 'playwright'
-import { getBrowser } from '../browser.ts'
+import { Browser, Page } from 'playwright'
 import { IPage } from './page.entity.ts'
 
 export abstract class BasePageFactory {
-  private browser: Promise<Browser>
+  constructor(private readonly browser: Browser) {}
 
-  constructor(cdpURL: string) {
-    this.browser = getBrowser(cdpURL)
+  async create(url: string): Promise<IPage> {
+    const page = await this.browser.newPage()
+    page.goto(url)
+    return this.toPage(page)
   }
 
-  abstract create(url: string): Promise<IPage>
+  abstract toPage(page: Page): IPage
 }
