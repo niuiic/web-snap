@@ -1,56 +1,12 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:inversify@^7.6.1": "7.6.1_reflect-metadata@0.2.2",
     "npm:pdf-lib@^1.17.1": "1.17.1",
     "npm:playwright-extra@^4.3.6": "4.3.6_playwright@1.54.1",
     "npm:playwright@^1.54.1": "1.54.1",
-    "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1",
-    "npm:zod@^4.0.5": "4.0.5"
+    "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1"
   },
   "npm": {
-    "@inversifyjs/common@1.5.2": {
-      "integrity": "sha512-WlzR9xGadABS9gtgZQ+luoZ8V6qm4Ii6RQfcfC9Ho2SOlE6ZuemFo7PKJvKI0ikm8cmKbU8hw5UK6E4qovH21w==",
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/common/-/common-1.5.2.tgz"
-    },
-    "@inversifyjs/container@1.11.1_reflect-metadata@0.2.2": {
-      "integrity": "sha512-MhgriyCm/lihOoo/ydGyBwZsKT6bUGAqQ+JM2i5JGgINLJx2g7Unt4bK+cFepHBh+um0M34VlRZFczmsHJhTSw==",
-      "dependencies": [
-        "@inversifyjs/common",
-        "@inversifyjs/core",
-        "@inversifyjs/plugin",
-        "@inversifyjs/reflect-metadata-utils",
-        "reflect-metadata"
-      ],
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/container/-/container-1.11.1.tgz"
-    },
-    "@inversifyjs/core@5.4.0_reflect-metadata@0.2.2": {
-      "integrity": "sha512-ZQXfPvXmIlzWs/K8n8R5AFBHk55gV7xEjKtKv1dvS3K6f8wEVXeHij9Zh0tqp2pvEyiuxv0UHPBONpE84DuYcg==",
-      "dependencies": [
-        "@inversifyjs/common",
-        "@inversifyjs/prototype-utils",
-        "@inversifyjs/reflect-metadata-utils"
-      ],
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/core/-/core-5.4.0.tgz"
-    },
-    "@inversifyjs/plugin@0.2.0": {
-      "integrity": "sha512-R/JAdkTSD819pV1zi0HP54mWHyX+H2m8SxldXRgPQarS3ySV4KPyRdosWcfB8Se0JJZWZLHYiUNiS6JvMWSPjw==",
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/plugin/-/plugin-0.2.0.tgz"
-    },
-    "@inversifyjs/prototype-utils@0.1.2": {
-      "integrity": "sha512-WZAEycwVd8zVCPCQ7GRzuQmjYF7X5zbjI9cGigDbBoTHJ8y5US9om00IAp0RYislO+fYkMzgcB2SnlIVIzyESA==",
-      "dependencies": [
-        "@inversifyjs/common"
-      ],
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/prototype-utils/-/prototype-utils-0.1.2.tgz"
-    },
-    "@inversifyjs/reflect-metadata-utils@1.2.0_reflect-metadata@0.2.2": {
-      "integrity": "sha512-EvXdBP+IjAZ3QKWFWGDzWLacyng9RMohtZ0c0EPUmvbaF4wgfwrE6n92ilt9aGwdbE5roGmDTmoRSmvavVOtIA==",
-      "dependencies": [
-        "reflect-metadata"
-      ],
-      "tarball": "https://registry.npmmirror.com/@inversifyjs/reflect-metadata-utils/-/reflect-metadata-utils-1.2.0.tgz"
-    },
     "@pdf-lib/standard-fonts@1.0.0": {
       "integrity": "sha512-hU30BK9IUN/su0Mn9VdlVKsWBS6GyhVfqjwl1FjZN4TxP6cCw0jP2w7V3Hf5uX7M0AZJ16vey9yE0ny7Sa59ZA==",
       "dependencies": [
@@ -181,16 +137,6 @@
     "inherits@2.0.4": {
       "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
       "tarball": "https://registry.npmmirror.com/inherits/-/inherits-2.0.4.tgz"
-    },
-    "inversify@7.6.1_reflect-metadata@0.2.2": {
-      "integrity": "sha512-a4bN7pjKP+h5ABNsf7vQNU0S5P/44RFqcUpFWXZLGEJuedF5ux3CvWGn2TfSbVbk3r7hNto6G3tR0j70nbFDKw==",
-      "dependencies": [
-        "@inversifyjs/common",
-        "@inversifyjs/container",
-        "@inversifyjs/core",
-        "reflect-metadata"
-      ],
-      "tarball": "https://registry.npmmirror.com/inversify/-/inversify-7.6.1.tgz"
     },
     "is-buffer@1.1.6": {
       "integrity": "sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==",
@@ -377,10 +323,6 @@
       ],
       "tarball": "https://registry.npmmirror.com/puppeteer-extra-plugin/-/puppeteer-extra-plugin-3.2.3.tgz"
     },
-    "reflect-metadata@0.2.2": {
-      "integrity": "sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==",
-      "tarball": "https://registry.npmmirror.com/reflect-metadata/-/reflect-metadata-0.2.2.tgz"
-    },
     "rimraf@3.0.2": {
       "integrity": "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==",
       "dependencies": [
@@ -411,20 +353,14 @@
     "wrappy@1.0.2": {
       "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
       "tarball": "https://registry.npmmirror.com/wrappy/-/wrappy-1.0.2.tgz"
-    },
-    "zod@4.0.5": {
-      "integrity": "sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==",
-      "tarball": "https://registry.npmmirror.com/zod/-/zod-4.0.5.tgz"
     }
   },
   "workspace": {
     "dependencies": [
-      "npm:inversify@^7.6.1",
       "npm:pdf-lib@^1.17.1",
       "npm:playwright-extra@^4.3.6",
       "npm:playwright@^1.54.1",
-      "npm:puppeteer-extra-plugin-stealth@^2.11.2",
-      "npm:zod@^4.0.5"
+      "npm:puppeteer-extra-plugin-stealth@^2.11.2"
     ]
   }
 }
