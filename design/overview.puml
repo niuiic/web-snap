@@ -26,7 +26,7 @@ rectangle page <<Entity>> {
     class Page {
         -url: string
         -closed: boolean
-        +clean()
+        +prepare()
         +shot(outputPath: string)
         +close(repo: PageRepo)
     }
@@ -35,9 +35,11 @@ rectangle page <<Entity>> {
 /' % page repo % '/
 rectangle pageRepo <<Repository>> {
     class PageRepo {
+        -browser: Browser
         +addPage(url: string): Page
         +removePage(page: Page)
         +findPageByUrl(url: string): Page
+        +getPageUrls(): string[]
     }
 }
 
@@ -48,16 +50,16 @@ rectangle loadPage <<Command>>
 loadPage --> pageRepo
 pageRepo --> pageLoaded
 
-/' % clean page % '/
-rectangle pageCleaned <<Event>>
-pageLoaded -right-> pageCleaned
-rectangle cleanPage <<Command>>
-cleanPage --> page
-page --> pageCleaned
+/' % prepare page % '/
+rectangle pagePrepared <<Event>>
+pageLoaded -right-> pagePrepared
+rectangle preparePage <<Command>>
+preparePage --> page
+page --> pagePrepared
 
 /' % shot page % '/
 rectangle pageShot <<Event>>
-pageCleaned -right-> pageShot
+pagePrepared -right-> pageShot
 rectangle takePageShot <<Command>>
 takePageShot --> page
 page --> pageShot
