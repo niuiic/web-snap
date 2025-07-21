@@ -2,6 +2,7 @@
   "version": "5",
   "specifiers": {
     "npm:inversify@^7.6.1": "7.6.1_reflect-metadata@0.2.2",
+    "npm:pdf-lib@^1.17.1": "1.17.1",
     "npm:playwright-extra@^4.3.6": "4.3.6_playwright@1.54.1",
     "npm:playwright@^1.54.1": "1.54.1",
     "npm:puppeteer-extra-plugin-stealth@^2.11.2": "2.11.2_playwright-extra@4.3.6__playwright@1.54.1_playwright@1.54.1",
@@ -49,6 +50,20 @@
         "reflect-metadata"
       ],
       "tarball": "https://registry.npmmirror.com/@inversifyjs/reflect-metadata-utils/-/reflect-metadata-utils-1.2.0.tgz"
+    },
+    "@pdf-lib/standard-fonts@1.0.0": {
+      "integrity": "sha512-hU30BK9IUN/su0Mn9VdlVKsWBS6GyhVfqjwl1FjZN4TxP6cCw0jP2w7V3Hf5uX7M0AZJ16vey9yE0ny7Sa59ZA==",
+      "dependencies": [
+        "pako"
+      ],
+      "tarball": "https://registry.npmmirror.com/@pdf-lib/standard-fonts/-/standard-fonts-1.0.0.tgz"
+    },
+    "@pdf-lib/upng@1.0.1": {
+      "integrity": "sha512-dQK2FUMQtowVP00mtIksrlZhdFXQZPC+taih1q4CvPZ5vqdxR/LKBaFg0oAfzd1GlHZXXSPdQfzQnt+ViGvEIQ==",
+      "dependencies": [
+        "pako"
+      ],
+      "tarball": "https://registry.npmmirror.com/@pdf-lib/upng/-/upng-1.0.1.tgz"
     },
     "@types/debug@4.1.12": {
       "integrity": "sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==",
@@ -263,9 +278,23 @@
       ],
       "tarball": "https://registry.npmmirror.com/once/-/once-1.4.0.tgz"
     },
+    "pako@1.0.11": {
+      "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==",
+      "tarball": "https://registry.npmmirror.com/pako/-/pako-1.0.11.tgz"
+    },
     "path-is-absolute@1.0.1": {
       "integrity": "sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==",
       "tarball": "https://registry.npmmirror.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
+    },
+    "pdf-lib@1.17.1": {
+      "integrity": "sha512-V/mpyJAoTsN4cnP31vc0wfNA1+p20evqqnap0KLoRUN0Yk/p3wN52DOEsL4oBFcLdb76hlpKPtzJIgo67j/XLw==",
+      "dependencies": [
+        "@pdf-lib/standard-fonts",
+        "@pdf-lib/upng",
+        "pako",
+        "tslib"
+      ],
+      "tarball": "https://registry.npmmirror.com/pdf-lib/-/pdf-lib-1.17.1.tgz"
     },
     "playwright-core@1.54.1": {
       "integrity": "sha512-Nbjs2zjj0htNhzgiy5wu+3w09YetDx5pkrpI/kZotDlDUaYk0HVA5xrBVPdow4SAUIlhgKcJeJg4GRKW6xHusA==",
@@ -371,6 +400,10 @@
       ],
       "tarball": "https://registry.npmmirror.com/shallow-clone/-/shallow-clone-0.1.2.tgz"
     },
+    "tslib@1.14.1": {
+      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",
+      "tarball": "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz"
+    },
     "universalify@2.0.1": {
       "integrity": "sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==",
       "tarball": "https://registry.npmmirror.com/universalify/-/universalify-2.0.1.tgz"
@@ -387,6 +420,7 @@
   "workspace": {
     "dependencies": [
       "npm:inversify@^7.6.1",
+      "npm:pdf-lib@^1.17.1",
       "npm:playwright-extra@^4.3.6",
       "npm:playwright@^1.54.1",
       "npm:puppeteer-extra-plugin-stealth@^2.11.2",
