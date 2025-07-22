@@ -46,10 +46,3 @@ export class PdfMerger {
     await Deno.remove(bookmarkFile)
   }
 }
-
-const pdfs = Array.from(
-  Deno.readDirSync('./output/lianglianglee/').map((x) =>
-    join(Deno.cwd(), 'output/lianglianglee', x.name)
-  )
-)
-new PdfMerger().merge(pdfs, join(Deno.cwd(), 'output/merged.pdf'))
