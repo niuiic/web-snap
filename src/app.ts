@@ -30,7 +30,6 @@ export class App {
       const page = await this.pageFactory.create(pageInfo.url)
       closePage = page.close.bind(page)
       await page.prepare()
-      console.log(pageInfo)
       await page.validate()
       const outputFile = join(this.outputDir, `${pageInfo.name}.pdf`)
       await page.shot(outputFile)
