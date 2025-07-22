@@ -4,8 +4,6 @@
     "@std/path": "jsr:@std/path@^1.1.1",
     "pdf-lib": "npm:pdf-lib@^1.17.1",
     "playwright": "npm:playwright@^1.54.1",
-    "playwright-extra": "npm:playwright-extra@^4.3.6",
-    "puppeteer-extra-plugin-stealth": "npm:puppeteer-extra-plugin-stealth@^2.11.2",
     "rxjs": "npm:rxjs@^7.8.2"
   },
   "lint": {
