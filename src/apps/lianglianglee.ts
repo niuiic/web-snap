@@ -53,7 +53,7 @@ const getPageUrls = async (): Promise<PageInfo[]> => {
 
   return Promise.all(
     articles.map(async (article) => ({
-      name: await article.innerText(),
+      name: (await article.innerText()).slice(0, -'.md'.length),
       url: await article.getAttribute('href')
     }))
   )
